@@ -41,6 +41,9 @@ class Solution(object):
     if s[l] != s[r]
         check (s[l+1,r]) #delete s[l]
         check (s[l,r-1]) #delete s[r]
+        
+    time: O(N)
+    space: O(1)
     """
     def validPalindrome(self,s):
         l = 0
