@@ -17,6 +17,8 @@ Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 Follow up:
 
+
+Need to work on the below task:
 Coud you solve it without converting the integer to a string?
 """
 
@@ -34,3 +36,11 @@ class Solution(object):
             return True
         else:
             return False
+
+if __name__ == "__main__":
+    n = 1231
+    print (n)
+    print (Solution().isPalindrome(n))
+    n2 = 121
+    print (n2)
+    print (Solution().isPalindrome(n2))
