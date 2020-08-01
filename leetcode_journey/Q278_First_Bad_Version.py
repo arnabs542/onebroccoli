@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 You are a product manager and currently leading a team to develop a new product. 
 Unfortunately, the latest version of your product fails the quality check. 

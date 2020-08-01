@@ -43,7 +43,6 @@ class Solution(object):
         n = len(nums)
         res = []
         nums.sort()
-        print nums
         if n < 3:
             return []
         
@@ -70,8 +69,6 @@ class Solution(object):
 
         return res
 
-# a = [-2,0,0,2,2]
-# print (Solution().threeSum(a))
 
 class TestSolution(unittest.TestCase):
 
