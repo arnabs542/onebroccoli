@@ -22,6 +22,13 @@ Constraints:
 
 */
 
+/*
+solution: start from 4, the sqrt of a number is always larger or equals to itself divided by 2
+so we start from 2 and 2/n and do binary search to find the mid number that the square of it is closest to x
+
+Time: O(logn)
+Space: O(1)
+*/
 
 
 public class Q69_Sqrtx {
