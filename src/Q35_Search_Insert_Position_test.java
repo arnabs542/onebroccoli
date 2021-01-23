@@ -11,7 +11,7 @@ public class Q35_Search_Insert_Position_test {
         int expected = 2;
         assertEquals(expected, res1);
     }
-
+    @Test
     public void Search_Insert_Position_test2 () {
         int[] b1 = new int[] {1,3,5,6};
         int b = 2;
