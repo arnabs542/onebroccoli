@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+//time O(n^2), space O(1)
 public class selectionSort {
     public int[] selectionSort2(int[] array) {
         //corner case
@@ -27,7 +27,7 @@ public class selectionSort {
     public static void main(String[] args) {
         int[] a = {5, 2, 7, 4, 1, 3, 8, 6};
         selectionSort solution = new selectionSort();
-        System.out.println(Arrays.toString(solution.selectionSort2(a)));
+        //System.out.println(Arrays.toString(solution.selectionSort2(a)));
     }
 }
 
