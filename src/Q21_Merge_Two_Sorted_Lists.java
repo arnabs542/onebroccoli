@@ -51,3 +51,31 @@ public class Q21_Merge_Two_Sorted_Lists {
         }
     }
 }
+
+//iteration
+//time O(m+n)
+//Space O(1) only allocates a few pointers, so it has a constant overall memory footprint.
+//public class Q21_Merge_Two_Sorted_Lists {
+//    public ListNode mergeTwoLists(ListNode l1, ListNode l2){
+//        ListNode prehead = new ListNode(0);
+//        ListNode prev = prehead;
+//        while (l1 != null && l2 != null){
+//            if (l1.val <= l2.val){
+//                prev.next = l1;
+//                l1 = l1.next;
+//            } else {
+//                prev.next = l2;
+//                l2 = l2.next;
+//            }
+//            prev = prev.next;
+//
+//        }
+//        //post processing
+//        if (l1 != null){
+//            prev.next = l1;
+//        } else {
+//            prev.next = l2;
+//        }
+//        return prehead.next;
+//    }
+//}
