@@ -11,6 +11,9 @@ A linked list can be reversed either
 iteratively or recursively. Could you implement both?
  */
 public class Q206_Reverse_Linked_List {
+    //Method1: Iteration
+    //Space: O(1)
+    //Time: O(n)
     public ListNode reverseList(ListNode head){
         if (head == null || head.next == null){
             return head; //sanity check
@@ -23,6 +26,19 @@ public class Q206_Reverse_Linked_List {
             head = next;
         }
         return prev;
+    }
+
+    //Method2: recursion
+    //Space: O(n)
+    //Time: O(n)
+    public ListNode reverseList2(ListNode head){
+        if (head == null || head.next == null){
+            return head;
+        }
+        ListNode newHead = reverseList2(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
     }
 }
 
