@@ -40,6 +40,41 @@ public class Q206_Reverse_Linked_List {
         head.next = null;
         return newHead;
     }
+
+    public String printList(ListNode head) {
+        ListNode cur = head;
+        String s = "";
+        while(cur != null){
+            s += Integer.toString(cur.val);
+            if(cur.next != null){
+                s+= "->";
+            }
+            cur = cur.next;
+        }
+        return s;
+    }
+    public static void main(String[] args){
+        Q206_Reverse_Linked_List s = new Q206_Reverse_Linked_List();
+        ListNode node1 = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(3);
+        node1.next = node2;
+        node2.next = node3;
+        //ListNode resultRecursion = s.reverseList2(node1);
+        ListNode resultIter = s.reverseList(node1);
+
+        //System.out.println(s.printList(resultRecursion));
+        System.out.println(s.printList(resultIter));
+
+
+
+
+    }
+
+
 }
+
+
+
 
 
