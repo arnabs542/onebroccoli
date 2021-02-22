@@ -9,13 +9,13 @@ Output: 1->2->3->4->5
 
 
 public class Q203_Remove_Linked_List_Elements {
-    public ListNode removeElements(ListNode head, int val){
+    public ListNode removeElements(ListNode head, int val) {
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
         ListNode prev = dummyHead;
         ListNode cur = head;
-        while (cur != null){
-            if (cur.val == val){
+        while (cur != null) {
+            if (cur.val == val) {
                 prev.next = cur.next;
 
             } else {
@@ -29,17 +29,17 @@ public class Q203_Remove_Linked_List_Elements {
     public String printList(ListNode head) {
         ListNode cur = head;
         String s = "";
-        while(cur != null){
+        while (cur != null) {
             s += Integer.toString(cur.val);
-            if(cur.next != null){
-                s+= "->";
+            if (cur.next != null) {
+                s += "->";
             }
             cur = cur.next;
         }
         return s;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Q203_Remove_Linked_List_Elements s = new Q203_Remove_Linked_List_Elements();
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
@@ -49,7 +49,9 @@ public class Q203_Remove_Linked_List_Elements {
         node2.next = node3;
         node3.next = node4;
         int target = 2;
-        ListNode result = s.removeElements(node1,target);
+        ListNode result = s.removeElements(node1, target);
 
-        System.out.println(result);
+        System.out.println(s.printList(result));
+    }
 }
+
