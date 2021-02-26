@@ -15,14 +15,16 @@ Given 1->2->3->4->5, reorder it to 1->5->2->4->3.
 
 /*
 Solution:
-1. find middle of the linked list
-2. reverse the second half of the list
-3. merge two linked list
+1. find middle of the linked list  O(N)
+2. reverse the second half of the list O(N/2)
+3. merge two linked list O(N/2)
+Time: O(N)
+Space:O(1)
  */
 
 public class Q143_Reorder_List {
     public ListNode reorderList(ListNode head) {
-        //sanity check
+        //sanity check if null return null
         if (head == null) return null;
         //1. find middle of linked list
         //if even number, return second one  123456--> 4
@@ -81,14 +83,12 @@ public class Q143_Reorder_List {
         ListNode node4 = new ListNode(4);
         ListNode node5 = new ListNode(5);
         ListNode node6 = new ListNode(6);
-        ListNode node7 = new ListNode(7);
 
         node1.next = node2;
         node2.next = node3;
         node3.next = node4;
         node4.next = node5;
         node5.next = node6;
-        node6.next = node7;
         //ListNode resultRecursion = s.reverseList2(node1);
         ListNode result = s.reorderList(node1);
 
