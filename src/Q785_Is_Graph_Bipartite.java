@@ -19,4 +19,7 @@ in the graph connects a node in set A and a node in set B.
 Return true if and only if it is bipartite.
  */
 public class Q785_Is_Graph_Bipartite {
+    public boolean isBipartite(int[][] graph){
+
+    }
 }
