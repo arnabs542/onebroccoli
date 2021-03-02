@@ -66,7 +66,7 @@ public class Q225_Implement_Stack_using_Queues {
             }
             int top = q1.poll(); //keep the last one
             while (!q2.isEmpty()){
-                q1.add(q2.poll); //还原之前的queue
+                q1.add(q2.poll()); //还原之前的queue
             }
             return top;
         }
