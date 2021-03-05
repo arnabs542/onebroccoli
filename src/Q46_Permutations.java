@@ -34,7 +34,7 @@ public class Q46_Permutations {
             return result;
         }
         char[] array = set.toCharArray();
-        swap(array, 0, result);
+        helper(array, 0, result);
         return result;
     }
 
