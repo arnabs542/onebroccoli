@@ -62,6 +62,8 @@ public class Q46_Permutations {
 
     private void swap(char[] array, int left, int right){
         char tmp = array[left];
+        array[left] = array[right];
+        array[right] = tmp;
 
     }
 
