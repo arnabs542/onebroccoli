@@ -59,7 +59,7 @@ public class Q46_Permutations {
             swap(array, index, 1);
         }
     }
-
+    //swap function
     private void swap(char[] array, int left, int right){
         char tmp = array[left];
         array[left] = array[right];
