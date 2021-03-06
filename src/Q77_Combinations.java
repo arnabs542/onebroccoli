@@ -30,6 +30,13 @@ Constraints:
 1 <= k <= n
 
  */
+
+/*
+Time: O(k*CkN) where CkN is number of combinations to build
+    append/pop(add,removeLast) operations are constant-time ones and the only
+    consuming part is to append the built combination of length k to the output.
+Space: O(CkN) to keep all combinations for an output.
+ */
 import java.util.LinkedList;
 import java.util.List;
 
