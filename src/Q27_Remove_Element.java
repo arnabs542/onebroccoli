@@ -50,6 +50,6 @@ Constraints:
  */
 public class Q27_Remove_Element {
     public int removeElement(int[] nums, int val){
-
+        if
     }
 }
