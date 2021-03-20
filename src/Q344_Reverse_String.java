@@ -24,6 +24,7 @@ You must do this by modifying the input array in-place with O(1) extra memory.
  */
 public class Q344_Reverse_String {
     //Solution 1: Iterative
+    //O(m*n)
     public void reverseString1(char[] s){
         if (s == null || s.length <= 1){
             return;
@@ -42,6 +43,7 @@ public class Q344_Reverse_String {
     }
 
     public static void main(String[] args){
+        //test
         Q344_Reverse_String s = new Q344_Reverse_String();
         String a1 = "Hello World";
         char[] a = a1.toCharArray();
