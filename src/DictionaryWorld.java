@@ -20,6 +20,14 @@ Word: “robob” return false
 Word: “robcatbob” return true since it can be composed by
 "rob", "cat", "bob"
  */
+
+/*
+Solution:
+Input is not null or empty
+dict is not null and dict is not empty
+all the strings in dict are not null or empty
+M[i] : index (i - 1) in input, also can represent the substring (0, i);
+ */
 public class DictionaryWorld {
     public boolean canBreak(String input, String[] dict) {
         Set<String> dictSet = toSet(dict);
