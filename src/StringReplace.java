@@ -102,7 +102,7 @@ public class StringReplace {
         }
     }
 
-    //get all the matches of s1 end positions in input
+    //get all the matches of s1 end positions in input string
     private ArrayList<Integer> getAllMatches(char[] input, String s){
         ArrayList<Integer> matches = new ArrayList<Integer>();
         int i = 0;
