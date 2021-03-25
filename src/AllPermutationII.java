@@ -14,6 +14,13 @@ Set = "aba", all permutations are ["aab", "aba", "baa"]
 Set = "", all permutations are [""]
 Set = null, all permutations are []
  */
+
+/*
+Time O(N!): time complexity for all the nodes in the recursion tree, O(N!)
+Space O(N^2): sum of space for all the nodes in one route in the recursion tree, root space: O(length), O(length-1)..... O(N^2)
+
+
+ */
 public class AllPermutationII {
     public List<String> permutations(String input){
         List<String> result = new ArrayList<String>();
