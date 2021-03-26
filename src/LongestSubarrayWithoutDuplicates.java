@@ -13,7 +13,9 @@ letters for "bcdfbd" is "bcdf", we should return 4 in this case.
 /*
 build hashset to store all the characters being processed so far
 1. slow, fast pointer, iterate through the string for each character
-2. 
+2. if input.atChar(fast) already exists, fast stop, hashset remove the character, slow++
+3. if not exist, add to hashset, fast++
+4. update longest to the max of (longest, fast-slow)
  */
 public class LongestSubarrayWithoutDuplicates {
     public int longest(String input){
