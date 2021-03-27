@@ -17,19 +17,23 @@ public class ReverseLinkedList {
             ListNode next = head.next;
             head.next = prev;
             prev = head;
+            head = next;
         }
+
         return prev;
     }
 
-//    public ListNode reverseLinkedListRecursion(ListNode head){
-//        if (head == null || head.next == null){
-//            return head;
-//        }
-//        ListNode newHead = head.next;
-//
-//        return head;
-//
-//    }
+    public ListNode reverseLinkedListRecursion(ListNode head){
+        if (head == null || head.next == null){
+            return head;
+        }
+        ListNode newHead = reverseLinkedListRecursion(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+
+    }
     public static void printSinglyLinkedList(ListNode node, String seperation){
         while (node != null){
             System.out.print(String.valueOf(node.val) + seperation);
@@ -46,5 +50,12 @@ public class ReverseLinkedList {
         c.next = d;
         System.out.println("Given linked list: ");
         printSinglyLinkedList(a, " ");
+
+        ReverseLinkedList s = new ReverseLinkedList();
+//        ListNode newHead= s.reverseLinkedListIter(a);
+        ListNode newHead= s.reverseLinkedListRecursion(a);
+
+        System.out.println("Reversed Linked list:");
+        printSinglyLinkedList(newHead, " ");
     }
 }
