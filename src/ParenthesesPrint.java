@@ -26,7 +26,7 @@ if {
 /*
 1. use DFS to do the permutation of parentheses,
 2. 2n (n is #of pairs) levels in the recursion tree, one curly brace each level
-3. 每层每个node分几个叉出来，2， 2 states to put on each level, either left or right curly brace on each level
+3. 每层每个node分几个叉出来，2，2 states to put on each level, either left or right curly brace on each level
 
 Time: O(2^2N * n) worst case n is print
 Space: O(2N) height of the tree.
