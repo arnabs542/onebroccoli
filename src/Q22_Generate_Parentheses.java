@@ -21,7 +21,7 @@ Solution:
 Time: O(2^N)
 Space: O(N) 2n levels of call stack , stringbuilder is also n
  */
-public class ValidPermutationsOfParentheses {
+public class Q22_Generate_Parentheses {
     public List<String> validParentheses(int n){
         List<String> result = new ArrayList<>();
         //final string contains 2n characters, n pairs
@@ -50,7 +50,7 @@ public class ValidPermutationsOfParentheses {
     }
 
     public static void main(String[] args){
-        ValidPermutationsOfParentheses s = new ValidPermutationsOfParentheses();
+        Q22_Generate_Parentheses s = new Q22_Generate_Parentheses();
         int n = 2;
         List<String> result = s.validParentheses(n);
         System.out.println(result);
