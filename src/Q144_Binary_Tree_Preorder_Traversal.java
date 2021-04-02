@@ -55,6 +55,20 @@ import java.util.List;
 //    }
 //}
 
+/*
+Solution:
+Preorder: root, left, right sequence
+1. print/add root value
+2. recurse root.left
+3. recurse root.right
+
+三叉树：
+root.left
+root.mid
+root.right
+
+ */
+
 public class Q144_Binary_Tree_Preorder_Traversal {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
@@ -66,6 +80,8 @@ public class Q144_Binary_Tree_Preorder_Traversal {
             return;
         }
         res.add(root.val);
+        //如果是打印
+//        System.out.println(root.val);
         helper(root.left, res);
         helper(root.right, res);
     }
