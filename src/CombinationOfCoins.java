@@ -16,4 +16,7 @@ cur.get(i) = number of coins of coins[i]
 all the combinations are stored in the result as List of List<Integer>
  */
 public class CombinationOfCoins {
+    //each combination is represented as a List<Integer> cur.
+    //cur.get(i) = number of coins of coins[i]
+    //all the combinations are stored in the result as List of List<Integer>
     public List<List<Integer>> combinations(int target, int[] coins) }
