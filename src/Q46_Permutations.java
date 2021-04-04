@@ -24,47 +24,59 @@ Constraints:
 All the integers of nums are unique.
  */
 
+
+/*
+Solution:
+//choose the character to be at the position of "Index"
+all the already chosen positions are (0, index - 1)
+all the candidate characters can be at position "index"
+are in the subarray of (index, array.length-1)
+ */
 import java.util.List;
 import java.util.ArrayList;
-public class Q46_Permutations {
-    public List<String> permutations(String set){
+
+
+public class Q46_Permutations{
+    public List<String> permutations(String input){
         List<String> result = new ArrayList<String>();
         //sanity check
-        if (set == null){
+        if (input == null){
             return result;
         }
-        char[] array = set.toCharArray();
+        char[] array = input.toCharArray();
         helper(array, 0, result);
         return result;
     }
 
-    //choose the character to be at the position of "Index"
-    //all the already chosen positions are (0, index - 1)
-    //all the candidate characters can be at position "index"
-    //are in the subarray of (index, array.length-1)
-    private void helper(char[] array, int index,  List<String> result){
+    private void helper(char[] array, int index, List<String> result){
         //terminate condition:
-        //only when we have already chosen the characters for all the positions,
-        //we can have a complete permutation
+        //only when we have already chosen all the characters for all positions
+        //it means we have a complete permutation
         if (index == array.length){
             result.add(new String(array));
             return;
         }
+
         //all the possible characters could be placed at index are
         //the characters in the subarray (index, array.length-1)
         for (int i = index; i < array.length; i++){
             swap(array, index, i);
             helper(array, index + 1, result);
-            //remember to swap back when back track to previou level
-            swap(array, index, 1);
+            swap(array, index, i);//remember to swap back when back track to previous level
         }
     }
+
     //swap function
     private void swap(char[] array, int left, int right){
         char tmp = array[left];
         array[left] = array[right];
         array[right] = tmp;
-
     }
-
+    public static void main(String[] args){
+        Q46_Permutations s = new Q46_Permutations();
+        String array = "abc";
+        List<String> res = s.permutations(array);
+        System.out.println(res);
+    }
 }
+
