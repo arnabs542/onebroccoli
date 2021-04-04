@@ -5,7 +5,7 @@ import java.util.List;
 #laicode 66 All Valid Permutations Of Parentheses I
 Given N pairs of parentheses “()”, return a list with all the valid permutations.
 
-Assumptions
+Assumptions：
 
 N > 0
 Examples
