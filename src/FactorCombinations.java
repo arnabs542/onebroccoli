@@ -27,8 +27,29 @@ your solution should return
 { { 2, 2, 2, 3 }, { 2, 2, 6 }, { 2, 3, 4 }, { 2, 12 }, { 3, 8 }, { 4, 6 } }
 
 note: duplicate combination is not allowed.
+
  */
 public class FactorCombinations {
+    public List<List<Integer>> combinations(int target){
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> cur = new ArrayList<>();
+        helper(target, 2, cur, result);
+        return result;
+    }
+    private void helper(int target, int start, List<Integer> cur, List<List<Integer>> result){
+        for (int i = start; i * i <= target; i++){
+            if (target % i == 0) {
+                cur.add(i);
+                cur.add(target / i);
+                result.add(new ArrayList<>(cur));
+                cur.remove(cur.size() - 1);
+                helper(target / i, i, cur, result);
+                cur.remove(cur.size() - 1);
+            }
+        }
+    }
+ /*
+ //laicode solution 看不懂
     public List<List<Integer>> combinations(int target){
         List<List<Integer>> result = new ArrayList<>();
         if (target <= 1){
@@ -69,7 +90,7 @@ public class FactorCombinations {
       }
       return factors;
     }
-
+*/
     public static void main(String[] args){
         FactorCombinations s = new FactorCombinations();
         int target = 24;
