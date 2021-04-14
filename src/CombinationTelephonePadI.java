@@ -18,6 +18,18 @@ if input number is 231, possible words which can be formed are:
 
 [ad, ae, af, bd, be, bf, cd, ce, cf]
  */
+
+/*
+
+ABC        A__          B__           C__
+        /  |  \       /  |  \       /  |  \
+DEF   AD_ AE_ AF_   BD_ BE_ BF_   CD_ CE_ CF_
+      /|\        /  |  \       /  |  \
+GHI  ADG ADH ADI
+
+Time: O(4^n) 取最差的4个字母的作为upperbound
+Space:
+ */
 public class CombinationTelephonePadI {
     public String[] combinations(int number){
         List<String> result = new ArrayList<String>();
@@ -32,7 +44,7 @@ public class CombinationTelephonePadI {
             result.add(sb.toString());
             return;
         }
-        String a = numToChar[number[level] - '0']; //为什么要减'0'?
+        String a = numToChar[number[level] - '0']; //get the value of any character digit
         char[] chars = numToChar[number[level] - '0'].toCharArray();
         if (chars.length == 0){
             helper(number, numToChar, level + 1, sb, result);
@@ -45,7 +57,7 @@ public class CombinationTelephonePadI {
     }
     public static void main(String[] args){
         CombinationTelephonePadI s = new CombinationTelephonePadI();
-        String[] result = s.combinations(213);
+        String[] result = s.combinations(234);
         System.out.println(Arrays.toString(result));
     }
 }
