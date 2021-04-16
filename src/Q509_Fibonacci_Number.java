@@ -31,6 +31,14 @@ Constraints:
 
 0 <= n <= 30
  */
+
+/*
+base case: f(0), f(1)
+recursive rule: F(n) = F(n -1) + F(n -2)
+
+Time: O(2^n) , 2^n node, O(1) each node
+Space: height of tree, O(N)
+ */
 public class Q509_Fibonacci_Number {
     public int fib(int n){
         if (n == 0){
