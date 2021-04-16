@@ -17,6 +17,18 @@ For example, "0.1.2.201" and "192.168.1.1" are valid IP addresses and
 
 
  */
+
+/*
+goal:
+find 4 valid subsetions,
+valid IP address:
+1. no leading zero
+2. each number is between [1, 255]
+
+use recursion and backtracking
+1. taking snipets , 1-3 digits long, validating each of the snipet before moving on
+
+ */
 public class Q93_Restore_IP_Addresses {
     public List<String> Restore(String ip){
         List<String> result = new ArrayList<String>();
@@ -36,10 +48,12 @@ public class Q93_Restore_IP_Addresses {
             }
             return;
         }
+        //case1: 1 digit
         if (index < ip.length){
             helper(ip, level + 1, index + 1, sb.append(ip[index]).append('.'), result);
             sb.delete(sb.length() - 2, sb.length());
         }
+        //case 2: 2 digits
         if (index + 1 < ip.length){
             char a = ip[index];
             char b = ip[index + 1];
@@ -48,13 +62,15 @@ public class Q93_Restore_IP_Addresses {
                 sb.delete(sb.length() - 3, sb.length());
             }
         }
+        //case 3: 3digits
         if (index + 2 < ip.length){
             char a = ip[index];
             char b = ip[index + 1];
             char c = ip[index + 2];
             //符合条件的数字：
-            //1. a = 1
-            //2. a = 2
+            //1. no leading zero
+            //2. a = 1
+            //3. a = 2
             //  1) b 在0-4之间
             //  2) b = 5, c 在0-5之间
             if (a == '1' || a == '2' && b >= '0' && b <= '4' || a == '2' & b == '5' && c >='0' && c <= '5'){
@@ -66,7 +82,7 @@ public class Q93_Restore_IP_Addresses {
 
     public static void main(String[] args){
         Q93_Restore_IP_Addresses s = new Q93_Restore_IP_Addresses();
-        String ip = "012201";
+        String ip = "0122001";
         List<String> result = s.Restore(ip);
         System.out.println(result);
     }
