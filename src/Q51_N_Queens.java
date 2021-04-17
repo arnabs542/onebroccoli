@@ -89,34 +89,9 @@ public class Q51_N_Queens {
         return true;
     }
 
-    //for leetcode answer needs to be formatted
-    //eg. [1,3,0,2]
-    //[.,Q,.,.],
-    //[.,.,.,Q],
-    //[Q,.,.,.],
-    //[.,.,Q,.]
 
-    private List<List<String>> format(List<List<Integer>> array, int n){
-        List<List<String>> result = new ArrayList<List<String>>();
-        for (int i = 0; i < array.size(); i++){
 
-            for (int col = 0; col < n; col++){
-                List<String> ans = new ArrayList<String>();
 
-                for (int j = 0; j < n; j++){
-                    StringBuilder sb = new StringBuilder();
-                    if (j != array.get(i).get(col)){
-                        sb.append(".");
-                    } else {
-                        sb.append("Q");
-                    }
-                    ans.add(sb.toString());
-                }
-                result.add(ans);
-            }
-        }
-        return result;
-    }
 
 
     public static void main(String[] args){
@@ -126,6 +101,48 @@ public class Q51_N_Queens {
         result = s.nqueens(a);
         List<List<String>> result2 = new ArrayList<List<String>>();
         result2 = s.format(result, a);
-        System.out.println(result2);
+        System.out.println(result);
     }
 }
+
+
+   /*
+      //for leetcode answer needs to be formatted
+    //eg. [1,3,0,2]
+    //[.,Q,.,.],
+    //[.,.,.,Q],
+    //[Q,.,.,.],
+    //[.,.,Q,.]
+
+//    private List<List<String>> format(List<List<Integer>> array, int n){
+//        //for i in arr [[1,3,0,2],[2,0,3,1]]
+//            //list = i
+//            //for j in list [1,3,0,2]
+//                //for index in n
+//                    //if index = j  //1
+//                        //print q
+//                    //else print .
+//        List<List<String>> result = new ArrayList<List<String>>();
+//        //[[]]
+//        for (int i = 0; i < array.size(); i++){
+//            List<Integer> intList = array.get(i);
+//            List<String> ans = new ArrayList<String>();
+//
+//            //[ ]
+//            for (int j = 0; j < intList.size(); j++) {
+//                StringBuilder sb = new StringBuilder();
+//                for (int index = 0; index < n; index++) {
+//                    if (index == intList.get(j)) {
+//                        sb.append("Q");
+//                    } else {
+//                        sb.append(".");
+//                    }
+//                }
+//                ans.add(sb.toString());
+//            }
+//
+//            result.add(ans);
+//        }
+//        return result;
+//    }
+     */
