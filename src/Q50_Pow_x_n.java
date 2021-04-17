@@ -39,16 +39,22 @@ we need to do the computation for O(logn) times,
 so the space complexity is O(logn)
  */
 public class Q50_Pow_x_n {
-    public double myPow(double x, int n){
-        int N = n;
-        if (N < 0){
-            x = 1 / x;
-            N = -n;
+    public double myPow(int x, int n){
+        if (x == 0) {
+            if (n <= 0) {
+                return -1; //error
+            } else {
+                return 0;
+            }
         }
-        return fastPow(x, N);
+        if (n >= 0){
+            return fastPow(x ,n);
+        } else {
+            return 1 / (double)fastPow(x, -n);
+        }
     }
 
-    public double fastPow(double x, int n) {
+    public double fastPow(int x, int n) {
         if (n == 0) {
             return 1.0;
         }
@@ -59,5 +65,13 @@ public class Q50_Pow_x_n {
             return half * half * x;
         }
 
+    }
+
+    public static void main(String[] args){
+        Q50_Pow_x_n s = new Q50_Pow_x_n();
+        int a = 0;
+        int b = 0;
+        double result = s.myPow(a, b);
+        System.out.println(result);
     }
 }
