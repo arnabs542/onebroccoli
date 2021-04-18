@@ -2,30 +2,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-Given an m x n matrix, return all elements of the matrix in spiral order.
 
+121. Spiral Order Traverse I laicode
+Traverse an N * N 2D array in spiral order clock-wise starting
+ from the top left corner. Return the list of traversal sequence.
 
+Assumptions
 
-Example 1:
+The 2D array is not null and has size of N * N where N >= 0
+Examples
 
+{ {1,  2,  3},
 
-Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
-Output: [1,2,3,6,9,8,7,4,5]
-Example 2:
+  {4,  5,  6},
 
+  {7,  8,  9} }
 
-Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
-Output: [1,2,3,4,8,12,11,10,9,5,6,7]
-
-
-Constraints:
-
-m == matrix.length
-n == matrix[i].length
-1 <= m, n <= 10
--100 <= matrix[i][j] <= 100
+the traversal sequence is [1, 2, 3, 6, 9, 8, 7, 4, 5]
  */
-public class Q54_Spiral_Matrix {
+public class Spiral_Matrix_Traverse_NN {
     public List<Integer> spiral(int[][] matrix) {
         //base case: only 0, 1 element left
         List<Integer> result = new ArrayList<Integer>();
@@ -33,7 +28,7 @@ public class Q54_Spiral_Matrix {
         return result;
     }
 
-    private void recursiveTraverse(int[][] matrix, int offset, int size, List<Integer> result) {
+    private void recursiveTraverse(int[][] matrix, int offset, int size,  List<Integer> result) {
         if (size == 0) {
             return;
         }
@@ -58,8 +53,9 @@ public class Q54_Spiral_Matrix {
     }
 
     public static void main(String[] args){
-        Q54_Spiral_Matrix s = new Q54_Spiral_Matrix();
-        int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
+        Spiral_Matrix_Traverse_NN s = new Spiral_Matrix_Traverse_NN();
+//        int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
         List<Integer> result = s.spiral(matrix);
         System.out.println(result);
     }
