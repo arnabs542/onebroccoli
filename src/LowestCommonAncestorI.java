@@ -7,7 +7,6 @@ There is no parent pointer for the nodes in the binary tree
 
 The given two nodes are guaranteed to be in the binary tree
 
-
      1
    /  \
   2    3
