@@ -26,6 +26,22 @@ The number of nodes in the tree is in the range [0, 2000].
 -100 <= Node.val <= 100
 
  */
+
+/*
+Solution:
+ 1
+/ \
+2   5
+/ \   \
+3   4   6
+触底到6，
+root = 6, prev[0] = null, 6.right = null， 6.left = null, prev[0] = 6
+root = 5, prev[0] = 6,    5.right = 6,     5.left = null, prev[0] = 5
+root = 4, prev[0] = 5,    4.right = 5,     2.left = null, prev[0] = 4
+root = 3, prev[0] = 4,    3.right = 4,     3.left = null, prev[0] = 3
+root = 2, prev[0] = 3,    2.right = 3,     2.left = null, prev[0] = 2
+root = 1, prev[0] = 2,    1.right = 2,     1.left = null, prev[0] = 1
+ */
 public class Q114_Flatten_Binary_Tree_to_Linked_List {
     public void flatten(TreeNode root) {
         TreeNode[] prev = new TreeNode[1];
@@ -63,6 +79,8 @@ public class Q114_Flatten_Binary_Tree_to_Linked_List {
         }
 
     }
-    //触底到6， 6.right = null， 6.left = null,  prev[0] = 6
+
+    //
+
 
 }
