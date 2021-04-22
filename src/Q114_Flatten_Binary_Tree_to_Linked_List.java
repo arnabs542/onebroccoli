@@ -42,4 +42,27 @@ public class Q114_Flatten_Binary_Tree_to_Linked_List {
         root.left = null;
         prev[0] = root;
     }
+
+    public static void main(String[] args){
+        Q114_Flatten_Binary_Tree_to_Linked_List s = new Q114_Flatten_Binary_Tree_to_Linked_List();
+        TreeNode a = new TreeNode(1);
+        TreeNode b = new TreeNode(2);
+        TreeNode c = new TreeNode(3);
+        TreeNode d = new TreeNode(4);
+        TreeNode e = new TreeNode(5);
+        TreeNode f = new TreeNode(6);
+        a.left = b;
+        b.left = c;
+        b.right = d;
+        a.right = e;
+        e.right = f;
+        s.flatten(a);
+        while (a.right != null){
+            System.out.println((a.val));
+            a = a.right;
+        }
+
+    }
+    //触底到6， 6.right = null， 6.left = null,  prev[0] = 6
+
 }
