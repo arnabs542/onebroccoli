@@ -35,3 +35,19 @@ public class Q103_Binary_Tree_Zigzag_Level_Order_Traversal {
 
     }
 }
+
+
+public class Solution {
+    public List<Integer> zigZag(TreeNode root) {
+        if (root == null){
+            return new LinkedList<Integer>();
+        }
+        Deque<TreeNode> deque = new LinkedList<TreeNode>();
+        List<Integer> list = new LinkedList<Integer>();
+        deque.offerFirst(root);
+        int layer = 0; //layer = 0 means even layer, layer = 1 means odd layer
+        while (!deque.isEmpty()){
+
+        }
+    }
+}
