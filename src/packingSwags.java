@@ -7,7 +7,7 @@ M[n] 0 1 2 3 1 2
 
 base M[0] = 0. M[1] = 1
 induction rule:
-Recursive Rule: dp[i] = min(dp[i - sqrt(i)] to dp[i - 1]) + 1M[i] = 1+M[i - 1]
+Recursive Rule: dp[i] =min(dp[i - sqrt(i)] to dp[i - 1]) + 1M[i] = 1+M[i - 1]
  */
 public class packingSwags {
     public int minBoxes(int num){
