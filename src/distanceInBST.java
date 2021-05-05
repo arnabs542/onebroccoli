@@ -58,14 +58,13 @@ public distanceInBST {
         if (p == q) {
             return 0;
         }
-
         TreeNode ancestor = LCA(root, p, q);
         return distance(ancestor, p) + distance(ancestor, q); //add the path node1 to LCA and node2 to LCA
 
     }
 
     //given two nodes, find their lowewst common ancestor
-    public TreeNode LCA (TreeNode root,int p, int q){
+    public TreeNode LCA(TreeNode root,int p, int q){
         //corner cases
         if (root == null) {
             return null;
@@ -81,7 +80,7 @@ public distanceInBST {
         return left == null ? right : left;
     }
 
-    public int distance (TreeNode node,int val){
+    public int distance(TreeNode node,int val){
         if (node == null) {
             return -1;
         }
