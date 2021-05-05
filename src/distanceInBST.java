@@ -44,8 +44,8 @@ TreeNode right;
 
 }
  */
-public class distanceInBST {
-    /*
+
+/*
 Solution:
 first calculate LCA for two nodes
 then use recursion to go through recursion tree to find the distance
@@ -53,7 +53,7 @@ add the path : node 1 to LCA + node 2 to LCA
 TC: O(N)
 SC: O(height)
 */
-public distanceInBST {
+public class distanceInBST {
     public int distanceBST(TreeNode root,int p, int q){
         if (p == q) {
             return 0;
@@ -69,7 +69,7 @@ public distanceInBST {
         if (root == null) {
             return null;
         }
-        if (root.val = p || root.val == q) {
+        if (root.val == p || root.val == q) {
             return root;
         }
         TreeNode left = LCA(root.left, p, q);
