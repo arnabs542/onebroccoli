@@ -80,6 +80,7 @@ assumptions: input is valid, not empty or null
 
  */
 public class Q91_Decode_Ways {
+
     public List<String> numDecodings(String input) {
         List<String> result = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
@@ -114,25 +115,13 @@ public class Q91_Decode_Ways {
         }
     }
 
+
     public static void main(String[] args){
         Q91_Decode_Ways s = new Q91_Decode_Ways();
         String a = "1121";
+//        String a = "111111111111111111111111111111111111111111111";
         List<String> result = s.numDecodings(a);
         System.out.println(result);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
+
