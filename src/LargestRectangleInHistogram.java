@@ -11,6 +11,7 @@ that can be formed in the histogram.
 Assumptions
 
 The given array is not null or empty
+
 Examples
 
 { 2, 1, 3, 3, 4 }, the largest rectangle area is 3 * 3 = 9
