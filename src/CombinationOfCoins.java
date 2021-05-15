@@ -33,10 +33,10 @@ coins = {2, 1}, target = 4, the return should be
  */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /*
+bfs
 each combination is represented as a List<Integer> cur.
 cur.get(i) = number of coins of coins[i]
 all the combinations are stored in the result as List of List<Integer>
