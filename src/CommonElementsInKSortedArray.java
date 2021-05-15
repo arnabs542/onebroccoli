@@ -20,7 +20,7 @@ public class CommonElementsInKSortedArray {
         //assumptions: input and its elements are not null, and support fast random access
         List<Integer> result = input.get(0);
         for (int i = 1; i < input.size(); i++){
-            result = helper(result, input.get(i));
+            result = helper(result, input.get(i)); //
         }
         return result;
     }
